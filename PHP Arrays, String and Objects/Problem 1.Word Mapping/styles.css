@@ -1,0 +1,20 @@
+textarea{
+    width: 400px;
+}
+
+table{
+    background-color: #D3D3D3;
+}
+
+table, tr, td{
+    border: 1px solid black;
+}
+
+td{
+    padding: 2px;
+}
+
+.word{
+    width: 60px;
+    font-weight: bold;
+}

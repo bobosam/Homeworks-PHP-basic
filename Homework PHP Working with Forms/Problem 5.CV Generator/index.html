@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>cv-generator</title>
+    <link href="styles/formStyle.css" rel="stylesheet" type="text/css">
+    <link href="styles/stylesPhp.css" rel="stylesheet" type="text/css">
+    <script src="addRem.js"></script>
+</head>
+<body>
+    <form method="get" action="CVGenerator.php">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <input type="text" name="firstName" pattern="[A-Za-z]{2,20}" title="Only letters
+Between 2 and 20 symbols" placeholder="First Name"  required="required"/><br/>
+            <input type="text" name="lastName" placeholder="Last Name" pattern="[A-Za-z]{2,20}" title="Only letters
+Between 2 and 20 symbols" required="required"/><br/>
+            <input type="email" name="email" placeholder="Email" pattern="[a-zA-z\d]+@[a-zA-Z\d]+.[a-zA-z]+" title="Letters, Numbers
+Only one “@”, only one “.”Example: example@example.com" required="required"/><br/>
+            <input type="tel" name="phone" placeholder="Phone Number" pattern="[\d+\- ]+" title="Numbers and “+”, “-”, “ ”" required="required"/><br/>
+            <label for="female">Female</label>
+            <input type="radio" name="sex" id="female" value="Female" required="required"/>
+            <label for="male">Male</label>
+            <input type="radio" name="sex" id="male" value="Male" required="required"/><br/>
+            <label for="birth">Birth Date</label><br/>
+            <input type="date" id="birth" name="birth" required="required"  /><br/>
+            <label for="nationality">Nationality</label><br/>
+            <select name="nationality" id="nationality" required="required">
+                <option value="Bulgarian">Bulgarian</option>
+                <option value="Indian">Indian</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Last Work Position</legend>
+            <label for="company">Company Name </label>
+            <input type="text" name="company" id="company" pattern="[A-Za-z\d]{2,20}" title="Letters and Numbers
+Between 2 and 20 symbols
+" required="required"/><br/>
+            <label for="from">From</label>
+            <input type="date" name="from" id="from" required="required"/><br/>
+            <label for="to">To</label>
+            <input type="date" name="to" id="to" required="required"><br/>
+        </fieldset>
+        <fieldset id ="pcSkills">
+            <legend>Computer Skills</legend>
+            <p>Programming Languages</p>
+            <div class = "clone1">
+            <input type="text" name="pcLanguage[]" required="required"/>
+                <select name="progrLanguage[]" id="progrLanguage">
+                    <option value="Basic">Basic</option>
+                    <option value="Senior">Senior</option>
+                    <option value="Expert">Expert</option>
+
+                </select><br/>
+                <button type="button" onclick="removeElement()">Remove Language</button>
+                <button type="button" onclick="addLang()">Add Language</button>
+            </div>
+            </fieldset>
+        <fieldset id="lang">
+            <legend>Other skills</legend>
+            <p>Languages</p>
+            <div class="clone2">
+                <input type="text" name="language[]" pattern="[A-Za-z]{2,20}" title="Only letters
+Between 2 and 20 symbols" required="required"/>
+                <select name="spoken[]" id="lvlSpoken">
+                    <option value="none">-Comperison-</option>
+                    <option value="beginner">Beginner</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="advanced">Advanced</option>
+                </select>
+                <select name="reading[]" id="lvlReadomg">
+                    <option value="none">-Reading-</option>
+                    <option value="beginner">Beginner</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="advanced">Advanced</option>
+                </select>
+                <select name="writing[]" id="lvlWriting">
+                    <option value="none">-Writing-</option>
+                    <option value="beginner">Beginner</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="advanced">Advanced</option>
+                </select><br/>
+                <button type="button" onclick="remLangNormLang()">Remove Language</button>
+                <button type="button" onclick="addLangNormLang()">Add Language</button>
+            </div>
+            <p>Driving license</p>
+            <label for="B">B</label>
+            <input type="checkbox" id="B" name="drive[]" value="B" />
+            <label for="A">A</label>
+            <input type="checkbox" id="A" name="drive[]" value="A"/>
+            <label for="C">C</label>
+            <input type="checkbox" id="C" name="drive[]" value="C" />
+        </fieldset>
+        <input type="submit" value="Generate CV"/>
+     </form>
+</body>
+</html>

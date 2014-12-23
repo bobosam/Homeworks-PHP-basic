@@ -1,0 +1,32 @@
+input{
+    margin-top: 10px;
+}
+
+nav{
+    background-color: #8CAAD2;
+    width: 140px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding-left: 10px;
+    margin: 5px;
+    color: black;
+}
+
+h1{
+    margin-bottom: 0;
+}
+
+hr{
+    margin-top: 0;
+    color: black;
+    background-color: black;
+    height: 1px;
+}
+
+ul{
+    list-style: circle;
+}
+
+a{
+    color: black;
+}

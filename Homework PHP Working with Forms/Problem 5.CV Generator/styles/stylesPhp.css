@@ -1,0 +1,11 @@
+th, tr, td{
+    border: 1px solid black;
+}
+.header{
+    font-weight: bold;
+    text-align: center;
+}
+
+table{
+    margin-bottom: 10px;
+}

@@ -1,0 +1,17 @@
+table{
+    margin-top: 50px;
+}
+table,tr,th,td{
+    border: 1px solid black;
+}
+th, td{
+    padding: 2px;
+}
+
+th{
+    text-align: center;
+}
+
+#total{
+    font-weight: bold;
+}

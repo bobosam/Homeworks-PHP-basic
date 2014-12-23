@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>calculate-interest</title>
+</head>
+<body>
+    <form method="get" action="CalculateInterest.php"/>
+        <label for="amount">Enter Amount</label>
+        <input type="text" name="amount" id="amount"  required="required"/><br/>
+        <input type="radio" name="currency" id="usd" value="$" required="required"/>
+        <label for="usd">USD</label>
+        <input type="radio" name="currency" id="eur" value="€"/>
+        <label for="eur">EUR</label>
+        <input type="radio" name="currency" id="bgn" value="лв"/>
+        <label for="bgn">BGN</label><br/>
+        <label for="interest">Compound Interest Amount</label>
+        <input type="text" name="interest" id="interest" required="required"/><br/>
+        <select name="period" required="required">
+            <option value="6">6 Months</option>
+            <option value="12">1 Year</option>
+            <option value="24">2 Years</option>
+            <option value="60">5 Years</option>
+        </select>
+        <input type="submit" value="Calculate"/>
+    </form>
+</body>
+</html>
